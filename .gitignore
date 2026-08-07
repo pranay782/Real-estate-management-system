@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Generated at runtime - not source code
+receipts/*.pdf
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
