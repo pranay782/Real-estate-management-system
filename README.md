@@ -112,7 +112,7 @@ by GridFS once you upload your first property image). This is a good
 screenshot to include in your report/viva slides — it proves the GUI is
 really talking to MongoDB and not just holding data in memory.
 
-## 4. Design decisions worth mentioning in your report
+## 4. Design decisions 
 
 - **One shared `db.py`** — every module imports `get_db()`/`get_fs()`
   from here instead of opening its own connection, so there's exactly one
@@ -165,18 +165,3 @@ assignment submission.
 | PDF receipt not found | Check the `receipts/` folder — the app prints/shows the full path when a deal is closed |
 | Blank/garbled charts | Make sure `matplotlib` installed without errors; on Linux you may need `sudo apt install python3-tk` for Tkinter itself |
 
-## 7. For the viva/demo
-
-A clean run-through that shows every integration point in ~3 minutes:
-
-1. Log in as admin.
-2. **Properties** — add one, upload a photo, filter by location.
-3. **Clients & Agents** — add an agent, add a client with a budget/location
-   that matches the property you just added, click **Find Matching
-   Properties** to prove it live-queries the properties collection.
-4. **Inquiries** — create an inquiry for that client/property/agent pair,
-   move it through the status pipeline, then **Close Deal** — point out
-   that the property's status flips to sold/rented automatically and a PDF
-   receipt is generated.
-5. **Dashboard** — refresh and show the pie/bar charts update, then export
-   a collection to CSV.
